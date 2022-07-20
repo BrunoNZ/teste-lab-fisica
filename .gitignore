@@ -54,6 +54,8 @@ dkms.conf
 # Input/Output files
 *.csv
 *.txt
+*.png
+*.svg
 
 # Executable files
 main_*
