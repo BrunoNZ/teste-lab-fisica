@@ -11,3 +11,8 @@ Baixar 10 séries de dados Pluviometricos (https://www.snirh.gov.br/hidroweb/ser
 
 ## Bônus:
 Plotar os resultados usando o [gnuplot](http://www.gnuplot.info/), cada um em uma figura. O diretório `ex_plot` contém um exemplo de uma plotagem simples.
+
+## Informações importantes:
+  * Os valores de `chuva` são válidos quando o valores correspondentes de `chuva_status` forem igual a 1.
+  * A organização das variáveis pode ser alterada a vontade.
+  * O máximo de linhas (256) foi estipulado apenas a fim de simplificar a leitura dos arquivos.
