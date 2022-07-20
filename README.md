@@ -13,6 +13,9 @@ Baixar 10 séries de dados Pluviometricos (https://www.snirh.gov.br/hidroweb/ser
 Plotar os resultados usando o [gnuplot](http://www.gnuplot.info/), cada um em uma figura. O diretório `ex_plot` contém um exemplo de uma plotagem simples.
 
 ## Informações importantes:
+  * O teste pode ser feito em C ou Fortran90.
+  * Os diretórios `versao_c` e `versao_fortran` contêm uma base dos programas para cada versão.
+  * O Makefile foi configurado para compilar as duas versões  juntas, usando o comando `make` ou `make all`, ou separadamente, usando os comandos `make c` ou `make fortran`. Usar o comando `make clean` para limpar os arquivos temporários e executáveis, caso necessário.
   * Os valores de `chuva` são válidos quando o valores correspondentes de `chuva_status` forem igual a 1.
   * A organização das variáveis pode ser alterada a vontade.
   * O máximo de linhas (256) foi estipulado apenas a fim de simplificar a leitura dos arquivos.
