@@ -59,16 +59,16 @@ int le_entrada(const char *arq_entrada, int *codigo, int *mes, int *ano, float *
         fscanf(f_in, "%*f"); fscanf(f_in, ";");
         fscanf(f_in, "%*f"); fscanf(f_in, ";");
         
-        for (size_t i = 0; i < 31; i++)
+        for (size_t l = 0; l < 31; l++)
         {
-            if (fscanf(f_in, "%f;", &chuva[linhas][i]) != 1)
+            if (fscanf(f_in, "%f;", &chuva[i][l]) != 1)
             {
                 fscanf(f_in, ";");
             }
         }
-        for (size_t i = 0; i < 31; i++)
+        for (size_t l = 0; l < 31; l++)
         {
-            if (fscanf(f_in, "%d;", &chuva_status[linhas][i]) != 1)
+            if (fscanf(f_in, "%d;", &chuva_status[i][l]) != 1)
             {
                 fscanf(f_in, ";");
             }
@@ -84,13 +84,11 @@ void print_entrada(size_t linhas, int codigo, int *mes, int *ano, float **chuva,
     printf("CODIGO: %d\n", codigo);
     for (size_t l = 0; l < linhas; l++)
     {
-        printf("%d/%d: ", mes[l], ano[l]);
+        printf("%02d/%d: ", mes[l], ano[l]);
         for (size_t i = 0; i < 31; i++)
         {
-            if (chuva_status[l][i] == 0)
-                break;
-
-            printf("%6.1f", chuva[l][i]);
+            if (chuva_status[l][i] == 1)
+                printf("%6.1f", chuva[l][i]);
         }
         printf("\n");
     }

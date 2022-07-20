@@ -12,12 +12,15 @@ clean:
 	-find . -iname "main_[cf]" -exec rm {} \;
 
 # VERSAO C
-entradas.o: ${DIR_C}/entradas.c ${DIR_C}/entradas.h
+${DIR_C}/%.o: ${DIR_C}/%.c ${DIR_C}/%.h
 	$(CC) -c -o $@ $<
 
-main_c: ${DIR_C}/main.c entradas.o
+main_c: ${DIR_C}/main.o ${DIR_C}/entradas.o
 	$(CC) -o $@ $? -Wall
 
 # VERSAO FORTRAN
-main_f: ${DIR_FORTRAN}/main.f90
+${DIR_FORTRAN}/%.o: ${DIR_FORTRAN}/%.f90
+	$(FC) -c -o $@ $<
+
+main_f: ${DIR_FORTRAN}/main.o ${DIR_FORTRAN}/entradas.o
 	$(FC) -o $@ $?
