@@ -18,5 +18,6 @@ PROGRAM main
 
    call le_bindata(bd, arq_entrada, d_x, d_y, d_t)
    call print_bindata_txt(bd)
+   call free_bindata(bd)
 
 END program main

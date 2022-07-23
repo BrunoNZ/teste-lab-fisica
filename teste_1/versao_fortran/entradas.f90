@@ -10,6 +10,11 @@ module entradas
    
 contains
 
+subroutine free_bindata(bd)
+   type(bindata), intent(inout) :: bd
+   deallocate(bd%val)
+end subroutine free_bindata
+
 subroutine le_bindata(bd, arq_entrada, d_x, d_y, d_t)
    IMPLICIT NONE
 
