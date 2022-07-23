@@ -5,7 +5,7 @@
 
 #define MAX_LINES 256
 
-int aloca_entradas(int **mes, int **ano, float ***chuva, int ***chuva_status);
+void aloca_entradas(int **mes, int **ano, float ***chuva, int ***chuva_status);
 void free_entradas(size_t linhas, int **mes, int **ano, float ***chuva, int ***chuva_status);
 int le_entrada(const char *arq_entrada, int *codigo, int *mes, int *ano, float **chuva, int **chuva_status);
 void print_entrada(size_t linhas, int codigo, int *mes, int *ano, float **chuva, int **chuva_status);

@@ -9,6 +9,7 @@ fortran: main_f
 
 clean:
 	-find . -iname "*.o" -exec rm {} \;
+	-find . -iname "*.mod" -exec rm {} \;
 	-find . -iname "main_[cf]" -exec rm {} \;
 
 # VERSAO C

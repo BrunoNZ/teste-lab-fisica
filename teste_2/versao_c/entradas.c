@@ -3,7 +3,7 @@
 #include <locale.h>
 #include "entradas.h"
 
-int aloca_entradas(int **mes, int **ano, float ***chuva, int ***chuva_status)
+void aloca_entradas(int **mes, int **ano, float ***chuva, int ***chuva_status)
 {
     (*mes) = (int *)malloc(sizeof(int) * MAX_LINES);
     (*ano) = (int *)malloc(sizeof(int) * MAX_LINES);
